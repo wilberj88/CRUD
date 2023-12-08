@@ -1,10 +1,10 @@
 import streamlit as st
 from streamlit_gsheets import GSheetsConnection
 
-url = "https://docs.google.com/spreadsheets/d/1tW1NgWwTD-rWk8TYbA4NglQ9dwvKlm2Qrqn7nz9kULM/edit?usp=sharing"
+url = "https://docs.google.com/spreadsheets/d/1FLkogLFyJUc4fJX7T0LxkmQ2LJPwqvP46zA-9J_5L6E/edit?usp=sharing"
 
 conn = st.connection("gsheets", type=GSheetsConnection)
 
-data = conn.read(spreadsheet=url, usecols=list(range(2))
+data = conn.read(spreadsheet=url, worksheet="1493627967")
 
 st.dataframe(data)
