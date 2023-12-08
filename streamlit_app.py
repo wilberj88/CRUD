@@ -8,3 +8,22 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 data = conn.read(spreadsheet=url, worksheet="0")
 
 st.dataframe(data)
+
+
+st.subheader("Inventory Health Check 📦")
+sql = '''
+SELECT
+  "Product_ID",
+  "Product_Name",
+  "Supplier",
+  "Current_Inventory_Level",
+  "Reorder_Level",
+FROM
+  Products
+WHERE
+  "Current_Inventory_Level" < "Reorder_Level"
+ORDER BY
+  "Reorder_Level" DESC;
+'''
+df_inventory_health = conn.query(spreadsheet=url, sql=sql)
+st.dataframe(df_inventory_health)
