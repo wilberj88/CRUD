@@ -1,5 +1,5 @@
 import streamlit as st
-from st.gsheets-connection import GSheetsConnection
+from st.gsheets_connection import GSheetsConnection
 
 url = "https://docs.google.com/spreadsheets/d/1tW1NgWwTD-rWk8TYbA4NglQ9dwvKlm2Qrqn7nz9kULM/edit?usp=sharing"
 
