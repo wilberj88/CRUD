@@ -7,10 +7,6 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 
 data = conn.read(spreadsheet=url, worksheet="0")
 
-st.set_page_config( 
-  page_title="Novus Crud", 
-  page_icon="🎮")
-
 st.subheader("Novus Mando 🎮 - Chains 🏭🌎🚚 Inventory 📦")
 st.dataframe(data)
 
