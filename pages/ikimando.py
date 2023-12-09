@@ -3,7 +3,7 @@ from streamlit_gsheets import GSheetsConnection
 
 conn = st.connection("gsheets", type=GSheetsConnection)
 
-data = conn.read(spreadsheet=url, worksheet="Users")
+data = conn.read(worksheet="Users")
 
 st.subheader("Novus Mando 🎮 - 🧠Iki❤️")
 st.subheader("Iki DB 📁")
