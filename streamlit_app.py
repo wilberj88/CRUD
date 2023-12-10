@@ -7,7 +7,8 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 
 data = conn.read(spreadsheet=url, worksheet="Products")
 
-st.subheader("Novus Mando 🎮 - Chains 🏭🌎🚚 Inventory 📦")
+st.header("Novus Mando 🎮 - Conexión GSheet Pública")
+st.subheader("Chains 🏭🌎🚚 Inventory 📦 - Product Analysis")
 st.dataframe(data)
 
 
