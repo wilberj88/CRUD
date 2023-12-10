@@ -14,7 +14,7 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 
 st.subheader("🧠Iki❤️ 📁 BD")
 #DataUsers
-data = conn.read(worksheet="Users", usecols=list(range(6)), ttl=5)
+data = conn.read(worksheet="Users", usecols=list(range(7)), ttl=5)
 data = data.dropna(how="all")
 st.dataframe(data)
 
