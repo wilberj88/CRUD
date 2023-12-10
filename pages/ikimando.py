@@ -94,6 +94,7 @@ with st.form(key="user_form"):
             conn.update(worksheet="Users", data=updated_df)
 
             st.success("User details successfully submitted! Bienvenido a MandIki")
+            st.subheader("🧠Iki❤️ 📁 BD Actualizada con el nuevo usuario")
             st.dataframe(updated_df)
 
 
