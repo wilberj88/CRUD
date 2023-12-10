@@ -5,8 +5,8 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 
 data = conn.read(worksheet="Users")
 
-st.subheader("Novus Mando 🎮 - 🧠Iki❤️")
-st.subheader("Iki DB 📁")
+st.header("Novus Mando 🎮 - Conexión GSheet Privada")
+st.subheader("🧠Iki❤️ 📁")
 
 st.dataframe(data)
 
