@@ -5,7 +5,7 @@ url = "https://docs.google.com/spreadsheets/d/1FLkogLFyJUc4fJX7T0LxkmQ2LJPwqvP46
 
 conn = st.connection("gsheets", type=GSheetsConnection)
 
-data = conn.read(spreadsheet=url, worksheet="0")
+data = conn.read(spreadsheet=url, worksheet="Products")
 
 st.subheader("Novus Mando 🎮 - Chains 🏭🌎🚚 Inventory 📦")
 st.dataframe(data)
