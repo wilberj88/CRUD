@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from streamlit_gsheets import GSheetsConnection
 
-st.title("Google Sheets as a DataBase")
+st.header("Novus Mando 🎮 - CRUD - GSheet Privada")
 
 # Function to create a sample Orders dataframe
 def create_orders_dataframe():
