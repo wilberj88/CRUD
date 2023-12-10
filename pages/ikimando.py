@@ -2,15 +2,20 @@ import streamlit as st
 from streamlit_gsheets import GSheetsConnection
 import pandas as pd
 
-conn = st.connection("gsheets", type=GSheetsConnection)
-
-data = conn.read(worksheet="Users")
-
+#Title&Description
 st.header("Novus Mando 🎮 - Conexión GSheet Privada")
 st.subheader("🧠Iki❤️ ✍️ Inscripción")
 
+#ConnectGoogleSheet
+conn = st.connection("gsheets", type=GSheetsConnection)
+
+#Formulario
+
 
 st.subheader("🧠Iki❤️ 📁 BD")
+#DataUsers
+data = conn.read(worksheet="Users")
+data = data.dropna(how="all")
 st.dataframe(data)
 
 
