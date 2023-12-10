@@ -5,6 +5,9 @@ import pandas as pd
 #Title&Description
 st.header("Novus Mando 🎮 - Conexión GSheet Privada")
 
+#ConnectGoogleSheet
+conn = st.connection("gsheets", type=GSheetsConnection)
+
 st.subheader("🧠Iki❤️ 📁 BD Actual")
 #DataUsers
 data = conn.read(worksheet="Users", usecols=list(range(7)), ttl=5)
@@ -15,8 +18,7 @@ st.dataframe(data)
 
 st.subheader("🧠Iki❤️ ✍️ Inscripción")
 
-#ConnectGoogleSheet
-conn = st.connection("gsheets", type=GSheetsConnection)
+
 
 #Formulario
 ODS = [
