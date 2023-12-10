@@ -12,7 +12,7 @@ st.subheader("Chains 🏭🌎🚚 Inventory 📦 - Product Analysis")
 st.dataframe(data)
 
 
-st.subheader("Inventory Health Check 📦")
+st.subheader("Alarm Low Inventory 📦")
 sql = '''
 SELECT
   "Product_ID",
