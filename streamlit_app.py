@@ -1,6 +1,8 @@
 import streamlit as st
 from streamlit_gsheets import GSheetsConnection
 from st_paywall import add_auth
+import streamlit.components.v1 as com
+
 
 url = "https://docs.google.com/spreadsheets/d/1FLkogLFyJUc4fJX7T0LxkmQ2LJPwqvP46zA-9J_5L6E/edit?usp=sharing"
 
@@ -31,6 +33,9 @@ ORDER BY
 df_inventory_health = conn.query(spreadsheet=url, sql=sql)
 st.dataframe(df_inventory_health)
 
+com.html("""
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Subscribirme', '#29abe0', 'Q5Q8S0K6H');kofiwidget2.draw();</script> 
+""", height=600, scrolling=True)
 
 add_auth(required=True)
 # ONLY AFTER THE AUTHENTICATION + SUBSCRIPTION, THE USER WILL SEE THIS ⤵
