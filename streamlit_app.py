@@ -35,7 +35,7 @@ st.dataframe(df_inventory_health)
 
 com.html("""
 <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Subscribirme', '#29abe0', 'Q5Q8S0K6H');kofiwidget2.draw();</script> 
-""", height=600, scrolling=True)
+""")
 
 add_auth(required=True)
 # ONLY AFTER THE AUTHENTICATION + SUBSCRIPTION, THE USER WILL SEE THIS ⤵
