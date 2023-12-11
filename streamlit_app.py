@@ -10,6 +10,17 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 
 data = conn.read(spreadsheet=url, worksheet="Products")
 
+st.markdown(
+        """
+        <style>
+        .appview-container.css-1wrcr25.egzxvld4 {
+            background-color: yellow;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
 st.header("Novus Mando 🎮 - Conexión GSheet Pública")
 st.subheader("Chains 🏭🌎🚚 Inventory 📦 - Product Analysis")
 st.dataframe(data)
