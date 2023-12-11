@@ -2,3 +2,4 @@ pandas
 streamlit
 st-gsheets-connection
 st-paywall
+streamlit-authenticator
