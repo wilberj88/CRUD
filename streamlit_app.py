@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_gsheets import GSheetsConnection
+from st_paywall import add_auth
 
 url = "https://docs.google.com/spreadsheets/d/1FLkogLFyJUc4fJX7T0LxkmQ2LJPwqvP46zA-9J_5L6E/edit?usp=sharing"
 
@@ -29,3 +30,11 @@ ORDER BY
 '''
 df_inventory_health = conn.query(spreadsheet=url, sql=sql)
 st.dataframe(df_inventory_health)
+
+
+add_auth(required=True)
+# ONLY AFTER THE AUTHENTICATION + SUBSCRIPTION, THE USER WILL SEE THIS ⤵
+# The email and subscription status is stored in session state.
+st.write(f"Subscription Status: {st.session_state.user_subscribed}")
+st.write("🎉 Yay! You're all set and subscribed to Novus! 🎉")
+st.write(f'By the way, your email is: {st.session_state.email}')
